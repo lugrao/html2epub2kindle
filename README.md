@@ -1,5 +1,5 @@
 # Plaintext Article
-A simple python script I use to read articles in plain text.
+A simple python script I use for reading articles in plain text.
 
 It depends on [txtify.it](https://txtify.it), and is intended for moderate use (for too many requests you should use their API).
 
