@@ -10,6 +10,12 @@ Store your e-mail credentials in `SENDER_ADDRESS` and `PASSWORD`.
 
 Your Send-to-Kindle e-mail address goes in `RECEIVER_ADDRESS`.
 
+To install the required dependencies, go to the project's root directory and type:
+
+```
+pip install -r requirements.txt
+```
+
 ## Usage
 
 Print article to the screen
