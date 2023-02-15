@@ -1,3 +1,4 @@
+import os
 import requests
 import sys
 import smtplib
@@ -5,11 +6,14 @@ import ssl
 from email import encoders
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # E-mail credentials
-SENDER_ADDRESS = ""
-PASSWORD = ""
-RECEIVER_ADDRESS = ""
+SENDER_ADDRESS = os.environ.get("SENDER_ADDRESS")
+PASSWORD = os.environ.get("PASSWORD")
+RECEIVER_ADDRESS = os.environ.get("RECEIVER_ADDRESS")
 
 
 def main():
@@ -81,6 +85,7 @@ def main():
     part.add_header("Content-Disposition", "attachment",
                     filename=("iso-8859-1", "", f"{filename}"))
     message.attach(part)
+    message["To"] = RECEIVER_ADDRESS
     text = message.as_string()
     context = ssl.create_default_context()
 
