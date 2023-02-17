@@ -4,7 +4,7 @@ A python program for converting html articles to epub and sending them to your k
 
 ## Setup
 
-Store your e-mail credentials in `SENDER_ADDRESS` and `PASSWORD`.
+Store your (Gmail) e-mail credentials in `SENDER_ADDRESS` and `PASSWORD`.
 
 Your Send-to-Kindle e-mail address goes in `RECEIVER_ADDRESS`.
 
