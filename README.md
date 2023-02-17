@@ -1,6 +1,6 @@
 # html2epub2kindle
 
-A python script for converting html articles to epub and sending them to your kindle.
+A python program for converting html articles to epub and sending them to your kindle.
 
 ## Setup
 
@@ -16,7 +16,8 @@ pip install -r requirements.txt
 
 ## Usage
 
-Send article to your kindle:
+To send an article to your kindle just execute the program in your terminal,
+passing the url as an argument:
 
 ```
 $ python html2epub2kindle.py https://articles.xyz/some-article
