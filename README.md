@@ -1,8 +1,6 @@
-# Plaintext Article
+# Epub Article
 
-A simple python script I use for converting articles to plain text and sending them to my kindle.
-
-It relies on [txtify.it](https://txtify.it) for the text conversion.
+A python script for converting html articles to epub and sending them to your kindle.
 
 ## Setup
 
@@ -18,20 +16,8 @@ pip install -r requirements.txt
 
 ## Usage
 
-Print article to the screen
+Send article to your kindle:
 
 ```
-$ python plaintext_article.py https://articles.xyz/some-article
-```
-
-Print article to the screen and save it as a `.txt` file
-
-```
-$ python plaintext_article.py https://articles.xyz/some-article -s
-```
-
-Print article to the screen, save it as a `.txt` file and send it to your kindle
-
-```
-$ python plaintext_article.py https://articles.xyz/some-article -S
+$ python html2epub2kindle.py https://articles.xyz/some-article
 ```
