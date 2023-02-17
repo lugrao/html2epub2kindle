@@ -1,4 +1,4 @@
-# Epub Article
+# html2epub2kindle
 
 A python script for converting html articles to epub and sending them to your kindle.
 
