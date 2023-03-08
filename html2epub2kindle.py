@@ -11,7 +11,7 @@ from email import encoders
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from readability import Document
-
+from urllib.parse import urlparse
 
 load_dotenv()
 
@@ -35,6 +35,7 @@ def main():
     print("Getting article")
 
     url = f"{sys.argv[1]}"
+
     user_agent = ("Mozilla/5.0 (X11; Linux x86_64; rv:89.0) Gecko/20100101"
                   " Firefox/89.0")
     res = requests.get(url, headers={"User-Agent": user_agent})
@@ -58,7 +59,7 @@ def main():
     epub_article = epub.EpubBook()
     epub_article.set_title(html_article.title())
     epub_article.set_language(lang)
-    epub_article.add_author("HTML to Epub script")
+    epub_article.add_author(urlparse(url).netloc)
 
     # create chapter
     chapter = epub.EpubHtml(
