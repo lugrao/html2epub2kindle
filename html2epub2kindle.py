@@ -40,6 +40,8 @@ def main():
                   " Firefox/89.0")
     res = requests.get(url, headers={"User-Agent": user_agent})
 
+    res.encoding = res.apparent_encoding
+
     html_article = Document(res.text)
 
     # Get clean filename
