@@ -7,6 +7,7 @@ EbookLib==0.18
 idna==3.4
 langid==1.1.6
 lxml==5.2.2
+lxml_html_clean==0.4.1
 numpy==1.26.2
 pycodestyle==2.10.0
 python-dotenv==0.21.1
