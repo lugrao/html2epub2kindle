@@ -1,3 +1,4 @@
+import cloudscraper
 import langid
 import os
 import re
@@ -38,7 +39,8 @@ def main():
 
     user_agent = ("Mozilla/5.0 (X11; Linux x86_64; rv:89.0) Gecko/20100101"
                   " Firefox/89.0")
-    res = requests.get(url, headers={"User-Agent": user_agent})
+    scraper = cloudscraper.create_scraper()
+    res = scraper.get(url, headers={"User-Agent": user_agent})
 
     res.encoding = res.apparent_encoding
 
