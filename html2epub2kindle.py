@@ -2,7 +2,6 @@ import cloudscraper
 import langid
 import os
 import re
-import requests
 import sys
 import smtplib
 import ssl
